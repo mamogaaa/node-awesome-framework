@@ -1,4 +1,3 @@
-
 var Example;
 
 Example = (function() {

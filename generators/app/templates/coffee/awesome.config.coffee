@@ -8,6 +8,7 @@ module.exports =
   db: 
     development: 
       client: '<%= database %>'
+      connection: {}
       # connection: 
       #   host: '127.0.0.1'
       #   database: 'prices_api_dev'
@@ -25,6 +26,7 @@ module.exports =
 
     staging: 
       client: '<%= database %>'
+      connection: {}
       # connection: 
       #   database: 'my_db'
       #   user:     'username'
@@ -44,6 +46,7 @@ module.exports =
 
     production: 
       client: '<%= database %>'
+      connection: {}
       # connection: 
       #   database: 'my_db'
       #   user:     'username'

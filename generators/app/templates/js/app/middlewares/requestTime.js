@@ -1,4 +1,3 @@
-
 module.exports = async function(ctx, next) {
   var ms, start;
   start = Date.now();

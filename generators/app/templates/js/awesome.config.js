@@ -1,7 +1,6 @@
-
 module.exports = {
   appName: '<%= appname %>',
-  defaultLanguage: 'js',
+  defaultLanguage: 'coffee',
   redis: {
     development: {},
     production: {},
@@ -10,6 +9,7 @@ module.exports = {
   db: {
     development: {
       client: '<%= database %>',
+      connection: {},
       // connection: 
       //   host: '127.0.0.1'
       //   database: 'prices_api_dev'
@@ -17,17 +17,18 @@ module.exports = {
       //   password: 'your_database_password'
       migrations: {
         directory: './db/migrations',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       }
     },
     staging: {
       client: '<%= database %>',
+      connection: {},
       // connection: 
       //   database: 'my_db'
       //   user:     'username'
@@ -39,17 +40,18 @@ module.exports = {
       migrations: {
         tableName: 'knex_migrations',
         directory: './db/migrations',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       }
     },
     production: {
       client: '<%= database %>',
+      connection: {},
       // connection: 
       //   database: 'my_db'
       //   user:     'username'
@@ -61,13 +63,13 @@ module.exports = {
       migrations: {
         tableName: 'knex_migrations',
         directory: './db/migrations',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'js',
-        loadExtensions: ['.js', '.js']
+        extension: 'coffee',
+        loadExtensions: ['.js', '.coffee']
       }
     }
   }

@@ -1,4 +1,3 @@
-
 var Router;
 
 Router = require('koa-router');
@@ -6,7 +5,6 @@ Router = require('koa-router');
 module.exports = function() {
   var router;
   router = new Router;
-  router.get('/', awesome.middlewares.helloWorld);
-  router.get('/:name', awesome.middlewares.helloWorld);
+  router.get('/', awesome.controllers.ExampleController.show);
   return router;
 };
