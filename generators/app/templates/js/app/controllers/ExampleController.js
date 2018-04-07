@@ -1,6 +1,6 @@
 module.exports = {
-  show: function(ctx) {
+  show: async function(ctx) {
     ctx.type = 'json';
-    return ctx.body = awesome.services.ExampleService.getExample();
+    return ctx.body = await awesome.services.ExampleService.getExample();
   }
 };
