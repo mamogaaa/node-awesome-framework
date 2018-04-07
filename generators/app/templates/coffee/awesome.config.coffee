@@ -9,7 +9,7 @@ module.exports =
     development: 
       client: '<%= database %>'
       connection: 
-        database: '<%= appname =>_dev'
+        database: '<%= appname %>_dev'
       #   host: '127.0.0.1'
       #   user:     'postgres'
       #   password: 'password'
@@ -26,7 +26,7 @@ module.exports =
     staging: 
       client: '<%= database %>'
       connection: 
-        database: '<%= appname =>_staging'
+        database: '<%= appname %>_staging'
       #   host: '127.0.0.1'
       #   user:     'username'
       #   password: 'password'
@@ -46,7 +46,7 @@ module.exports =
     production: 
       client: '<%= database %>'
       connection: 
-        database: '<%= appname =>_production'
+        database: '<%= appname %>_production'
       #   host: '127.0.0.1'
       #   user:     'username'
       #   password: 'password'
