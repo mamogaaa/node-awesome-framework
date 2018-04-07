@@ -1,6 +1,6 @@
 module.exports =
   order: (middlewares) ->
     [
-      middlewares.utils.requestTime,
+      middlewares.requestTime,
       middlewares.router
     ]

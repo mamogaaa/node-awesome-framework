@@ -1,5 +1,5 @@
 module.exports = {
   order: function(middlewares) {
-    return [middlewares.utils.requestTime, middlewares.router];
+    return [middlewares.requestTime, middlewares.router];
   }
 };

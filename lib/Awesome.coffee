@@ -29,10 +29,10 @@ Awesome::bootstrap = ->
     @init() 
     @logger.info "Starting app..."
     await @initializeServices()
-    await @initializeRedis()
-    await @initializeDB()
-    await @initializeServer()
-    await @customBootstrap()
+    # await @initializeRedis()
+    # await @initializeDB()
+    # await @initializeServer()
+    # await @customBootstrap()
     @logger.info "App has been successfully started!"
     @emit 'appStart'
   catch err
