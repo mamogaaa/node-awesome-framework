@@ -1,6 +1,6 @@
 module.exports = {
   appName: '<%= appname %>',
-  defaultLanguage: 'coffee',
+  defaultLanguage: '<%= lang %>',
   redis: {
     development: {},
     production: {},
@@ -9,30 +9,31 @@ module.exports = {
   db: {
     development: {
       client: '<%= database %>',
-      connection: {},
-      // connection: 
+      connection: {
+        database: '<%= appname =>_dev'
       //   host: '127.0.0.1'
-      //   database: 'prices_api_dev'
       //   user:     'postgres'
-      //   password: 'your_database_password'
+      //   password: 'password'
+      },
       migrations: {
         directory: './db/migrations',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       }
     },
     staging: {
       client: '<%= database %>',
-      connection: {},
-      // connection: 
-      //   database: 'my_db'
+      connection: {
+        database: '<%= appname =>_staging'
+      //   host: '127.0.0.1'
       //   user:     'username'
       //   password: 'password'
+      },
       pool: {
         min: 2,
         max: 10
@@ -40,22 +41,23 @@ module.exports = {
       migrations: {
         tableName: 'knex_migrations',
         directory: './db/migrations',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       }
     },
     production: {
       client: '<%= database %>',
-      connection: {},
-      // connection: 
-      //   database: 'my_db'
+      connection: {
+        database: '<%= appname =>_production'
+      //   host: '127.0.0.1'
       //   user:     'username'
       //   password: 'password'
+      },
       pool: {
         min: 2,
         max: 10
@@ -63,12 +65,12 @@ module.exports = {
       migrations: {
         tableName: 'knex_migrations',
         directory: './db/migrations',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       },
       seeds: {
         directory: './db/seeds',
-        extension: 'coffee',
+        extension: '<%= lang %>',
         loadExtensions: ['.js', '.coffee']
       }
     }
