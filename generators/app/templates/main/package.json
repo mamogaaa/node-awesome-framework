@@ -1,0 +1,18 @@
+{
+  "name": "<%= appname %>",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "awesome": "node node_modules/awesome-framework/bin/awesome.js",
+    "awesome:console": "node node_modules/awesome-framework/bin/awesome.js console",
+    "awesome:start": "node node_modules/awesome-framework/bin/awesome.js start",
+    "start": "node node_modules/awesome-framework/bin/awesome.js start",
+    "knex": "node node_modules/knex/bin/cli.js -x <%= lang %>"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

@@ -38,5 +38,7 @@ Console::start = ->
       catch err
         cb err
 
-ic = new Console compiler: ARGS.additional[0]
-ic.start()
+module.exports = (compiler = 'coffee') ->
+  ic = new Console compiler: compiler
+  ic.start()
+  ic

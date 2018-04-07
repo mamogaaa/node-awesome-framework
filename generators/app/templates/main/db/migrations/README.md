@@ -1,0 +1,1 @@
+# knex migrations directory
