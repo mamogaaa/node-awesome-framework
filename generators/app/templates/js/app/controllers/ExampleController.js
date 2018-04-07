@@ -1,10 +1,6 @@
-var ExampleService;
-
-({ExampleService} = awesome.services);
-
 module.exports = {
   show: function(ctx) {
     ctx.type = 'json';
-    return ctx.body = ExampleService.getExample();
+    return ctx.body = awesome.services.ExampleService.getExample();
   }
 };
