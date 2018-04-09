@@ -3,5 +3,6 @@ module.exports =
     [
       middlewares.requestTime
       middlewares.session
+      middlewares.jwt
       middlewares.router
     ]
