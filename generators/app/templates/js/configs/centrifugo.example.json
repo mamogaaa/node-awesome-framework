@@ -1,0 +1,8 @@
+{
+  "secret": "<%= secretKey %>",
+  "engine": "redis",
+  "redis_api": true,
+  "redis_url": "redis://localhost:6379",
+  "history_size": 10,
+  "history_lifetime": 30
+}

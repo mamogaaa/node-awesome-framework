@@ -39,7 +39,18 @@ module.exports = class extends Generator {
     this[`${this.packageManager}Install`]([this.database, 'awesome-framework']);
   }
 
+  getRandomKey (len = 10) {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < len; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
+
   app() {
+    this.secretKey = this.getRandomKey(20);
     this.sourceRoot(path.join(__dirname, './templates'))
     console.log(this.database)
     this.fs.copy(
@@ -71,6 +82,11 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath(`${this.lang}/configs`),
       this.destinationPath(`configs`),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath(`${this.lang}/configs/centrifugo.example.json`),
+      this.destinationPath(`configs/centrifugo.json`),
       this
     );
     this.fs.copyTpl(

@@ -1,6 +1,8 @@
 module.exports =
   appName: '<%= appname %>'
   defaultLanguage: '<%= lang %>'
+  keys: ['<%= secretKey %>']
+  secretKey: '<%= secretKey %>'
   redis: 
     development: {}
     production: {}
