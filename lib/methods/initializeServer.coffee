@@ -4,6 +4,7 @@ http = require 'http'
 
 module.exports = ->
   @server = new Koa
+  @server.keys = @config.keys
   new Promise (resolve, reject) =>
     @initializeMiddlewares()
     http.createServer(@server.callback()).listen @config.port, (err) =>
